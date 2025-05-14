@@ -1,21 +1,34 @@
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import Notfound from "./pages/Notfound";
-import getEmotionImage from "./util/get-emotion-image";
+import Button from "./components/Button";
 
 function App() {
   return (
     <>
-      <div>
-        <img src={getEmotionImage(1)} />
-        <img src={getEmotionImage(2)} />
-        <img src={getEmotionImage(3)} />
-        <img src={getEmotionImage(4)} />
-        <img src={getEmotionImage(5)} />
-      </div>
+      <Button
+        text={"normal"}
+        onClick={() => {
+          console.log("normal");
+        }}
+      />
+      <Button
+        text={"positive"}
+        onClick={() => {
+          console.log("positive");
+        }}
+        type={"POSITIVE"}
+      />
+      <Button
+        text={"negative"}
+        onClick={() => {
+          console.log("negative");
+        }}
+        type={"NEGATIVE"}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new" element={<New />} />
