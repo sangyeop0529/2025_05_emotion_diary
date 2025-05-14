@@ -4,30 +4,16 @@ import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import Notfound from "./pages/Notfound";
+import Header from "./components/Header";
 import Button from "./components/Button";
 
 function App() {
   return (
     <>
-      <Button
-        text={"normal"}
-        onClick={() => {
-          console.log("normal");
-        }}
-      />
-      <Button
-        text={"positive"}
-        onClick={() => {
-          console.log("positive");
-        }}
-        type={"POSITIVE"}
-      />
-      <Button
-        text={"negative"}
-        onClick={() => {
-          console.log("negative");
-        }}
-        type={"NEGATIVE"}
+      <Header
+        title={"header"}
+        leftChild={<Button text={"left"} />}
+        rightChild={<Button text="right" />}
       />
       <Routes>
         <Route path="/" element={<Home />} />
