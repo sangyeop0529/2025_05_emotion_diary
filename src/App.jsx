@@ -4,19 +4,18 @@ import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 import Notfound from "./pages/Notfound";
+import getEmotionImage from "./util/get-emotion-image";
 
 function App() {
-  const nav = useNavigate();
   return (
     <>
       <div>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/new"}>New</Link>
-        <Link to={"/diary"}>Diary</Link>
+        <img src={getEmotionImage(1)} />
+        <img src={getEmotionImage(2)} />
+        <img src={getEmotionImage(3)} />
+        <img src={getEmotionImage(4)} />
+        <img src={getEmotionImage(5)} />
       </div>
-
-      <button onClick={() => nav("/new")}>New 페이지로 이동</button>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/new" element={<New />} />
