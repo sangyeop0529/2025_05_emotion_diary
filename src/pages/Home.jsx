@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <>
       <Header
-        title={"2025년 5월"}
+        title={`${pivotDate.getFullYear()}년 ${pivotDate.getMonth() + 1}월`}
         leftChild={<Button onClick={onDecreaseMonth} text={"<"} />}
         rightChild={<Button onClick={onIncreaseMonth} text={">"} />}
       />
